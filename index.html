@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nossa Despedida</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TELA DE LOGIN -->
+  <main id="tela-login" class="container-central">
+    <div class="card login-card">
+      <h1>ultimo ep:) </h1>
+      <p>Digite seu apelido e senha para ver sua homenagem.</p>
+      
+      <form id="form-login">
+        <div class="campo">
+          <label for="apelido">Seu Apelido</label>
+          <input type="text" id="apelido"  required autocomplete="username">
+        </div>
+        
+        <div class="campo">
+          <label for="senha">Sua Senha</label>
+          <input type="text" id="senha"  required autocomplete="current-password">
+        </div>
+
+        <button type="submit" class="btn-primary">Entrar</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- PAINEL DO AMIGO (Inicialmente oculto) -->
+  <main id="conteudo-amigo" class="container-conteudo" style="display: none;">
+    <header class="header-boas-vindas">
+      <h1>Para você, <span id="nome-amigo">Amigo</span> ❤️</h1>
+      <p>Um pequeno registro de tudo que vivemos no ensino médio.</p>
+    </header>
+
+    <section class="grid-layout">
+      <!-- Player de Vídeo -->
+      <article class="card bloco-video">
+        <h2>Seu Vídeo Especial 🎬</h2>
+        <div class="video-responsive">
+          <iframe id="player-youtube" src="" title="Vídeo de Despedida" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </article>
+
+      <!-- Poema -->
+      <article class="card bloco-poema">
+        <h2>Para Guardar no Coração 📜</h2>
+        <p id="texto-poema" class="poema-conteudo">
+          <!-- O poema dinâmico será inserido via JS -->
+        </p>
+      </article>
+
+      <!-- Trilha Sonora -->
+      <article class="card bloco-musica">
+        <h2>Nossa Trilha Sonora 🎵</h2>
+        <div class="musica-container">
+          <iframe id="player-musica" style="border-radius:12px" src="" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Script Principal configurado como Módulo do Firebase -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
